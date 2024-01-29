@@ -1,8 +1,13 @@
 type HangmanWordProps = {
   guessedLetters: string[];
   wordToGuess: string;
+  revial?: boolean;
 };
-export const HangmanWord = ({guessedLetters, wordToGuess}:HangmanWordProps) => {
+export const HangmanWord = ({
+  guessedLetters,
+  wordToGuess,
+  revial = false,
+}: HangmanWordProps) => {
   return (
     <div
       style={{
@@ -26,9 +31,12 @@ export const HangmanWord = ({guessedLetters, wordToGuess}:HangmanWordProps) => {
           >
             <span
               style={{
-                visibility: guessedLetters.includes(letter)
-                  ? "visible"
-                  : "hidden",
+                visibility:
+                  guessedLetters.includes(letter) || revial
+                    ? "visible"
+                    : "hidden",
+                color:
+                  !guessedLetters.includes(letter) && revial ? "red" : "black",
               }}
             >
               {letter}
