@@ -13,10 +13,11 @@
   padding: 0.5rem;
   cursor: pointer;
   font-weight: bold;
-  color: #000;
+  color:#808080;
+  border-radius: 20%;
 }
 .btn.active {
-  background-color: hsl(200, 100%, 50%);
+  background-color: hsl(197, 66%, 79%);
   color: white;
 }
 .btn.inactive {
@@ -24,5 +25,5 @@
 }
 .btn:hover:not(:disabled),
 .btn:focus:not(:disabled) {
-  background-color: hsl(200, 100%, 75%);
+  background-color: hsl(197, 100%, 75%);
 }

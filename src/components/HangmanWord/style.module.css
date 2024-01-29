@@ -1,0 +1,15 @@
+.hangmanWordContainer {
+    display: flex;
+    gap: 0.25em;
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+  }
+  
+  .hangmanLetterContainer {
+    border-bottom: 0.1em solid black;
+    width: 1em;
+    text-align: center;
+  }
+  
