@@ -70,29 +70,29 @@ const RightLeg = (
 );
 
 const LeftLeg = (
-    <div
-      style={{
-        width: "100px",
-        height: "10px",
-        background: "black",
-        position: "absolute",
-        top: "210px",
-        right: 0,
-        rotate: "-60deg",
-        transformOrigin: "right bottom",
-      }}
-    />
-  );
+  <div
+    style={{
+      width: "100px",
+      height: "10px",
+      background: "black",
+      position: "absolute",
+      top: "210px",
+      right: 0,
+      rotate: "-60deg",
+      transformOrigin: "right bottom",
+    }}
+  />
+);
 
-export const HangmanDrawing = () => {
+const BodyParts = [Head, Body, RightArm, LeftArm, RightLeg, LeftLeg];
+
+type HangmanDrawingProps = {
+  numberOfGuesses: number;
+};
+export const HangmanDrawing = ({numberOfGuesses}: HangmanDrawingProps) => {
   return (
     <div style={{ position: "relative" }}>
-      {Head}
-      {Body}
-      {RightArm}
-      {LeftArm}
-      {RightLeg}
-      {LeftLeg}
+      {BodyParts.slice(0, numberOfGuesses)}
       <div
         style={{
           height: "50px",
